@@ -10,6 +10,32 @@
 <button type="image">
   <img src="random.jpeg">
 </button>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        /* Optional: Add some basic styling */
+        #imageContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="myInput" oninput="showImage()">
+    <div id="imageContainer"></div>
 
+    <script>
+        function showImage() {
+            const inputValue = document.getElementById('myInput').value.toLowerCase();
+            const imageContainer = document.getElementById('imageContainer');
+
+            if (inputValue === 'gyat') {
+                // Replace 'yourword' with the specific word you want to trigger the image
+                imageContainer.innerHTML = '<img src="random.jpeg" alt="Image">';
+            } else {
+                imageContainer.innerHTML = ''; // Clear the image container
+            }
+        }
+    </script>
 </body>
 </html>
